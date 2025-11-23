@@ -46,12 +46,10 @@ export const getTransactions = async (
  * Get a single transaction by ID
  * (Optional - for future enhancement)
  */
-export const getTransactionById = async (
-  txnId: number
-): Promise<any> => {
-  // TODO: Implement if needed
-  throw new Error('Not implemented');
-};
+export const getTransactionById = async (): Promise<any> => {
+	// TODO: Implement if needed
+	throw new Error('Not implemented')
+}
 
 export default {
   getTransactions,

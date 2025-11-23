@@ -18,6 +18,40 @@
   text-align: left;
   font-weight: 600;
   color: #0f172a;
+  position: relative; /* Needed for absolute positioning of sort-icon */
+}
+
+.table th.sortable {
+  cursor: pointer;
+  padding-right: 2rem; /* Make space for the icon */
+}
+
+.table th.sortable:hover {
+  background: #e2e8f0;
+}
+
+.sort-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #94a3b8; /* Default color for unsorted */
+  opacity: 0.6;
+}
+
+.sort-icon.asc {
+  border-bottom: 5px solid #334155; /* Darker for active sort */
+  opacity: 1;
+}
+
+.sort-icon.desc {
+  border-top: 5px solid #334155; /* Point down for descending */
+  border-bottom: none;
+  opacity: 1;
 }
 
 .table td {
@@ -31,4 +65,10 @@
 
 .table tbody tr:last-child td {
   border-bottom: none;
+}
+
+.no-results {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #64748b;
 }

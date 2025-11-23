@@ -1,68 +1,29 @@
-// Transaction-related types and interfaces
-
 export interface Transaction {
-  txnId: number;
+  id: string;
+  merchantId: string;
   amount: number;
   currency: string;
-  status: 'completed' | 'pending' | 'failed' | 'reversed';
-  timestamp: string;
-  cardType: string;
-  cardLast4: string;
-  acquirer: string;
-  issuer: string;
-  details: TransactionDetail[];
-}
-
-export interface TransactionDetail {
-  detailId: number;
-  type: 'fee' | 'tax' | 'adjustment' | 'refund';
-  amount: number;
-  description: string;
-}
-
-export interface TransactionSummary {
-  totalTransactions: number;
-  totalAmount: number;
-  currency: string;
-  byStatus: {
-    completed: number;
-    pending: number;
-    failed: number;
-  };
+  status: 'success' | 'failed' | 'pending';
+  date: string; // ISO date string
+  description?: string;
 }
 
 export interface TransactionResponse {
-  merchantId: string;
-  dateRange: {
-    start: string;
-    end: string;
-  };
-  summary: TransactionSummary;
-  transactions: Transaction[];
-  pagination: PaginationInfo;
-}
-
-export interface PaginationInfo {
+  data: Transaction[];
+  total: number;
   page: number;
-  size: number;
-  totalPages: number;
-  totalElements: number;
+  limit: number;
 }
 
 export interface FilterState {
   page: number;
   size: number;
-  startDate: string;
-  endDate: string;
-  status?: string;
-  searchQuery?: string;
+  startDate?: string;
+  endDate?: string;
+  status?: 'success' | 'failed' | 'pending';
 }
 
 export const DEFAULT_FILTERS: FilterState = {
-  page: 0,
-  size: 20,
-  startDate: '2025-11-16',
-  endDate: '2025-11-18',
-  status: undefined,
-  searchQuery: undefined,
+  page: 1,
+  size: 10,
 };

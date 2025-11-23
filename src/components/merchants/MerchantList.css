@@ -1,0 +1,145 @@
+.merchant-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.merchant-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.merchant-title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.search-filter-row {
+	display: flex;
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.search-input {
+	width: 75%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.status-dropdown {
+	width: 25%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background: white;
+	font-size: 14px;
+}
+
+.table-container {
+	width: 100%;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.table-container table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.table-container thead th:nth-child(1),
+.table-container tbody td:nth-child(1) {
+	width: 10%;
+}
+
+.table-container thead th:nth-child(2),
+.table-container tbody td:nth-child(2) {
+	width: 25%;
+}
+
+.table-container thead th:nth-child(3),
+.table-container tbody td:nth-child(3) {
+	width: 15%;
+}
+
+.table-container thead th:nth-child(4),
+.table-container tbody td:nth-child(4) {
+	width: 25%;
+}
+
+.table-container thead th:nth-child(5),
+.table-container tbody td:nth-child(5) {
+	width: 15%;
+}
+
+.table-container thead th:nth-child(6),
+.table-container tbody td:nth-child(6) {
+	width: 10%;
+}
+
+.table-container thead tr {
+	background: #f4f4f4;
+	font-weight: bold;
+}
+
+.table-container th,
+.table-container td {
+	padding: 10px;
+	border-bottom: 1px solid #e0e0e0;
+	text-align: left;
+}
+
+.table-container tbody tr {
+	height: 42px;
+}
+
+.table-container tbody {
+	/* display: block; */
+	/* height: 100%; */
+}
+
+.table-container thead,
+.table-container tbody tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.no-results {
+	padding: 16px;
+	color: #777;
+}
+
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.pagination-btn {
+	padding: 10px 16px;
+	background: #ccc;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.pagination-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.pagination-info {
+	font-weight: bold;
+}
+
+.merchant-row-clickable {
+	cursor: pointer;
+}
